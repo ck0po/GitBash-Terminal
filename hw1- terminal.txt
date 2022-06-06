@@ -1,0 +1,91 @@
+1) Посмотреть где я
+ pwd
+/c/Users/1/Desktop/hw1
+2) Создать папку
+ mkdir hw30group
+3) Зайти в папку
+ cd hw30group
+4) Создать 3 папки
+mkdir hwqa1 hwqa2 hwqa3
+5) Зайти в любую папку
+cd hwqa1
+6) Создать 5 файлов (3 txt, 2 json)
+ touch qaqa1.txt qaqa2.txt qaqa3.txt qaqa4.json qaqa5.json
+7) Создать 3 папки
+ mkdir noname1 noname2 noname3
+8. Вывести список содержимого папки
+ ls
+ noname1/  noname2/  noname3/  qaqa1.txt  qaqa2.txt  qaqa3.txt  qaqa4.json  qaqa5.json
+9) + Открыть любой txt файл
+ cat >> qaqa1.txt
+10) + написать туда что-нибудь, любой текст.
+ home work qa
+ 12345
+11) + сохранить и выйти.
+ Enter
+ Ctrl+C
+12) Выйти из папки на уровень выше
+ ~/Desktop/hw1/hw30group/hwqa1
+ cd ..
+ ~/Desktop/hw1/hw30group
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+ mv hwqa1/qaqa4.json hwqa3/qaqa4.json
+ mv hwqa1/qaqa5.json hwqa3/qaqa5.json
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+ cp hwqa1/qaqa1.txt hwqa2/qaqa1.txt
+ cp hwqa1/qaqa2.txt hwqa2/qaqa2.txt
+15) Найти файл по имени
+ find . -iname "qaqa5.json"
+ ./hwqa3/qaqa5.json
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+ grep home qaqa1.txt
+home work qa
+home 1
+home2
+home33
+17) вывести несколько первых строк из текстового файла
+ head -2 qaqa1.txt
+home work qa
+home 1
+18) вывести несколько последних строк из текстового файла
+tail -2 qaqa1.txt
+home33
+12345
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+ less qaqa1.txt
+20) вывести дату и время
+ date
+Sat May 28 11:28:14 RTZ 2022
+Задание*
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+ curl http://162.55.220.72:5005/terminal-hw-request
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   283  100   283    0     0   2389      0 --:--:-- --:--:-- --:--:--  2418{
+  "Intro": "Hello!! This is your the first response from server",
+  "Tasks": {
+    "Task_1": "Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)",
+    "result": [
+      "Your_String",
+      "Your_number"
+    ]
+  }
+}
+curl http://162.55.220.72:5005/get_method?name=()&age=(set_your_number)
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+vi script
+
+#1/bin/bash
+
+cd hw30group
+mkdir qascript1 qascript2 qascript3
+cd qascript1
+touch qq1.txt qq2.txt qq3.txt qq4.json qq5.json
+mkdir lok9 lok8 lok7
+ls
+mv qascript1/qq1.txt qascript2/qq1.txt
+mv qascript1/qq2.txt qascript2/qq2.txt
+
+chmod +x script
+./script
